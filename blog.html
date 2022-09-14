@@ -11,8 +11,20 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous" />
 
+    <!-- google font  -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet">
+
+
     <!-- Main css  -->
     <link rel="stylesheet" href="./styles.css" />
+
+    <style>
+        body {
+            font-family: 'Montserrat', sans-serif;
+        }
+    </style>
 </head>
 
 <body>
@@ -22,63 +34,200 @@
             <div class="bg-white py-3 px-2 rounded">
                 <div class="accordion accordion-flush" id="accordionFlushExample">
                     <div class="accordion-item">
-                      <h2 class="accordion-header" id="flush-headingOne">
-                        <button class="accordion-button fw-semibold fs-5 collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne">
-                            Difference between Var Let and Constant
-                        </button>
-                      </h2>
-                      <div id="flush-collapseOne" class="accordion-collapse collapse" aria-labelledby="flush-headingOne" data-bs-parent="#accordionFlushExample">
-                        <div class="accordion-body">
-                            <ul>
-                                <li>
-                                    var declarations are globally scoped or function scoped while let and const are block scoped.
-                                </li>
-                                <li>
-                                    var variables can be updated and re-declared within its scope; let variables can be updated but not re-declared; const variables can neither be updated nor re-declared.
-                                </li>
-                                <li>
-                                    They are all hoisted to the top of their scope. But while var variables are initialized with undefined, let and const variables are not initialized.
-                                </li>
-                                <li>
-                                    While var and let can be declared without being initialized, const must be initialized during declaration.
-                                </li>
-                            </ul>
+                        <h2 class="accordion-header" id="flush-headingOne">
+                            <button class="accordion-button fw-semibold fs-5 collapsed" type="button"
+                                data-bs-toggle="collapse" data-bs-target="#flush-collapseOne" aria-expanded="false"
+                                aria-controls="flush-collapseOne">
+                                Difference between local storage and session storage
+                            </button>
+                        </h2>
+                        <div id="flush-collapseOne" class="accordion-collapse collapse"
+                            aria-labelledby="flush-headingOne" data-bs-parent="#accordionFlushExample">
+                            <div class="accordion-body">
+                                The read-only sessionStorage property accesses a session Storage object for the current
+                                origin. sessionStorage is similar to localStorage; the difference is that while data in
+                                localStorage doesn't expire, data in sessionStorage is cleared when the page session
+                                ends.
+                                <ul>
+                                    <li>
+                                        Whenever a document is loaded in a particular tab in the browser, a unique page
+                                        session gets created and assigned to that particular tab. That page session is
+                                        valid only for that particular tab.
+                                    </li>
+                                    <li>
+                                        A page session lasts as long as the tab or the browser is open, and survives
+                                        over page reloads and restores.
+                                    </li>
+                                    <li>
+                                        Opening a page in a new tab or window creates a new session with the value of
+                                        the top-level browsing context, which differs from how session cookies work.
+                                    </li>
+                                    <li>
+                                        Opening multiple tabs/windows with the same URL creates sessionStorage for each
+                                        tab/window.
+
+                                    </li>
+                                    <li>
+                                        Duplicating a tab copies the tab's sessionStorage into the new tab.
+                                    </li>
+                                    <li>
+                                        Closing a tab/window ends the session and clears objects in sessionStorage.
+                                    </li>
+                                </ul>
+                            </div>
                         </div>
-                      </div>
                     </div>
                     <div class="accordion-item">
-                      <h2 class="accordion-header" id="flush-headingTwo">
-                        <button class="accordion-button fw-semibold fs-5 collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseTwo" aria-expanded="false" aria-controls="flush-collapseTwo">
-                            What is the difference between Arrow function and regular function in javascript
-                        </button>
-                      </h2>
-                      <div id="flush-collapseTwo" class="accordion-collapse collapse" aria-labelledby="flush-headingTwo" data-bs-parent="#accordionFlushExample">
-                        <div class="accordion-body">Regular functions created using function declarations or expressions are constructible and callable. Since regular functions are constructible, they can be called using the new keyword.
-                
-                            However, the arrow functions are only callable and not constructible, i.e arrow functions can never be used as constructor functions.</div>
-                      </div>
+                        <h2 class="accordion-header" id="flush-headingTwo">
+                            <button class="accordion-button fw-semibold fs-5 collapsed" type="button"
+                                data-bs-toggle="collapse" data-bs-target="#flush-collapseTwo" aria-expanded="false"
+                                aria-controls="flush-collapseTwo">
+                                What is Global Scope and Block Scope
+                            </button>
+                        </h2>
+                        <div id="flush-collapseTwo" class="accordion-collapse collapse"
+                            aria-labelledby="flush-headingTwo" data-bs-parent="#accordionFlushExample">
+                            <div class="accordion-body">
+                                <strong>Global Scope:</strong> When a variable is declared inside a function, it is only
+                                accessible within that function and cannot be used outside that function.
+                                <br><br>
+
+                                <strong>Block Scope:</strong> A variable when declared inside the if or switch
+                                conditions or inside for or while loops, are accessible within that particular condition
+                                or loop. To be consise the variables declared inside the curly braces are called as
+                                within block scope.
+
+                            </div>
+                        </div>
                     </div>
                     <div class="accordion-item">
-                      <h2 class="accordion-header" id="flush-headingThree">
-                        <button class="accordion-button fw-semibold fs-5 collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseThree" aria-expanded="false" aria-controls="flush-collapseThree">
-                            What is the difference between map and foreach in javascript
-                        </button>
-                      </h2>
-                      <div id="flush-collapseThree" class="accordion-collapse collapse" aria-labelledby="flush-headingThree" data-bs-parent="#accordionFlushExample">
-                        <div class="accordion-body">The main difference between map and forEach is that the map method returns a new array by applying the callback function on each element of an array, while the forEach method doesn't return anything</div>
-                      </div>
+                        <h2 class="accordion-header" id="flush-headingThree">
+                            <button class="accordion-button fw-semibold fs-5 collapsed" type="button"
+                                data-bs-toggle="collapse" data-bs-target="#flush-collapseThree" aria-expanded="false"
+                                aria-controls="flush-collapseThree">
+                                What is event loop and how it works
+                            </button>
+                        </h2>
+                        <div id="flush-collapseThree" class="accordion-collapse collapse"
+                            aria-labelledby="flush-headingThree" data-bs-parent="#accordionFlushExample">
+                            <div class="accordion-body">
+                                <strong>Event Loop:</strong> The event loop is the secret behind JavaScript's
+                                asynchronous
+                                programming. JS executes all operations on a single thread, but using a
+                                few smart data structures, it gives us the illusion of multi-threading.
+
+                                Easy Definition :
+                                The Event Loop has one simple job — to monitor the Call Stack and the
+                                Callback Queue or Message Queue.
+
+                                If the Call Stack is empty, it will take the first event from the
+                                Callback queue and will push it to the Call Stack, which effectively runs it.
+
+                                Such an iteration is called a tick in the Event Loop.
+                                Each event is just a function callback.
+
+                                Easiest explanation :
+                                When any Asynchronous event occur such as setTimeOut or promises...
+                                Then these task takes some time to complete I/O if they have any.
+                                If they completed their I/O or don't have any, then they simply put into
+                                message queue or callback queue. Then event loop will firstly execute the
+                                call stack tasks and then look for callback or message queue and then execute it
+                            </div>
+                        </div>
                     </div>
                     <div class="accordion-item">
-                      <h2 class="accordion-header" id="flush-headingFour">
-                        <button class="accordion-button fw-semibold fs-5 collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseFour" aria-expanded="false" aria-controls="flush-collapseFour">
-                            Why do we use template string in Javascript?
-                        </button>
-                      </h2>
-                      <div id="flush-collapseFour" class="accordion-collapse collapse" aria-labelledby="flush-headingFour" data-bs-parent="#accordionFlushExample">
-                        <div class="accordion-body">Template strings are a powerful feature of modern JavaScript released in ES6. It lets us insert/interpolate variables and expressions into strings without needing to concatenate like in older versions of JavaScript. It allows us to create strings that are complex and contain dynamic elements</div>
-                      </div>
+                        <h2 class="accordion-header" id="flush-headingFour">
+                            <button class="accordion-button fw-semibold fs-5 collapsed" type="button"
+                                data-bs-toggle="collapse" data-bs-target="#flush-collapseFour" aria-expanded="false"
+                                aria-controls="flush-collapseFour">
+                                How many undefined we get in javascript?
+                            </button>
+                        </h2>
+                        <div id="flush-collapseFour" class="accordion-collapse collapse"
+                            aria-labelledby="flush-headingFour" data-bs-parent="#accordionFlushExample">
+                            <div class="accordion-body">
+                                JavaScript provides some primitive as well as non-primitive data types. For example
+                                “null”, “boolean”, “undefined”, etc. belong to the primitive data type while “arrays”,
+                                and “objects” are non-primitive or complex data types. In JavaScript, any variable that
+                                is not assigned with any value has a default value of “undefined”. <br><br>
+
+                                What is undefined in JavaScript?
+                                The undefined type belongs to the primitive data types that can have only one value i.e.
+                                undefined. A variable that is declared/created but not assigned with a value anywhere in
+                                the program has a default value of “undefined”.
+                                <br>
+                                Syntax
+                                Here is the basic syntax for the JavaScript undefined type:
+                                <br>
+                                1.<br>
+                                undefined
+                                How to use undefined in JavaScript?
+                                Let’s consider some use cases of JavaScript undefined type:
+                                <br>
+                                Example1: variable declared but not defined
+                                In this example, we will check the type of a variable that is declared but not defined
+                                anywhere in the program:
+                                <br><br>
+                                In this example:
+
+                                We declared/created a variable “x” and didn’t assign it a value.
+                                Next, we utilized the “typeof” operator to find the type of “x”.
+                                Consequently, we get the below-given result:
+
+                                The typeof operator returned undefined which verified that an unassigned variable has a
+                                default value of “undefined”.
+                                <br><br>
+                                Example2: type of an empty string
+                                Let’s consider we have an empty string as shown in the below snippet:
+
+                                1.<br>
+                                var x = "";
+                                The task is to check the type and value of an empty string:
+                                <br>
+                                var x = "";
+                                console.log(x);
+                                console.log(typeof(x));
+                                The above snippet utilized the console.log() method:
+                                <br><br>
+
+                                To print the value of x.
+                                To print the data type of x.
+                                As a result, we get the below-given output:
+                                <br><br>
+                                The output verified that an empty string and an undefined variable are two different
+                                things. The undefined variable has a data type “undefined” while an empty string has a
+                                data type “string”.
+                                <br><br>
+                                Example3: check if a variable is defined or not
+                                In this example program, we will check whether a specific variable is defined or not. If
+                                the program does not define the variable, display the message “variable not defined!”.
+                                Else show the message “variable defined”:
+                                <br><br>
+                                var x;
+                                if (typeof x === "undefined") {
+                                message = "variable not defined!";
+                                console.log(message);
+                                } else {
+                                message = "variable defined!";
+                                console.log(message);
+                                }<br><br>
+                                The above code served the below given functionalities:
+                                <br><br>
+                                Declared a variable “x”.
+                                Next, compared the value of “x” with the “undefined” type.
+                                Printed “variable not defined” if the program does not define the variable.
+                                Else displayed the message “variable defined”:
+                                <br><br>
+                                This is how the undefined type works in JavaScript.
+                                <br>
+                                Conclusion
+                                In JavaScript, the undefined is a primitive type and has only one value “undefined”. A
+                                variable that is declared/created but not assigned with a value anywhere in the program
+                                has a default value of “undefined”.
+                            </div>
+                        </div>
                     </div>
-                  </div>
+                </div>
             </div>
         </section>
 
