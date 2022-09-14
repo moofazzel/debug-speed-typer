@@ -11,6 +11,8 @@ body {
   font-family: "Zilla Slab", serif;
 }
 
+
+
 .box-container {
   width: 70%;
   margin: 0 auto;
@@ -172,13 +174,10 @@ body {
 }
 
 .card {
-  text-align: center;
   width: 100%;
   height: 100%;
   padding: 50px;
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
+  gap: 15px;
   align-items: center;
   padding: 20px 30px;
   color: white;
@@ -191,6 +190,11 @@ body {
   );
   backdrop-filter: blur(5px);
   margin-bottom: 30px;
+}
+
+.card h3 {
+  margin-bottom: 10px;
+  line-height: 17px;
 }
 
 #modal-background {
