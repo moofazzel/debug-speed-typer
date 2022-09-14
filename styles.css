@@ -127,7 +127,7 @@ body {
   justify-content: center;
   margin: 30px 0;
 }
-button {
+.btn-start {
   padding: 10px 20px;
   border: none;
   font-size: 16px;
@@ -140,6 +140,31 @@ button {
   border: 2px solid #9dffad;
   cursor: pointer;
 }
+
+#btn-blog {
+  color: #fff;
+  text-decoration: none;
+  padding: 10px 20px;
+  border: none;
+  font-size: 18px;
+  font-weight: bold;
+  background-color: transparent;
+  border-radius: 10px;
+  cursor: pointer;
+  box-shadow: 1px 1px 6px 0px #9dffad;
+}
+
+.blog.box-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+#btn-blog {
+  position: initial;
+}
+
+.blog
 
 #histories {
   display: flex;
@@ -182,6 +207,8 @@ button {
   position: fixed;
   top: 0;
 }
+
+
 
 @media only screen and (max-width: 700px) {
   .box-container {
