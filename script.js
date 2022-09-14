@@ -8,6 +8,7 @@ const modalBackground = document.getElementById("modal-background");
 // variables
 let userText = "";
 let errorCount = 0;
+
 let startTime;
 let questionText = "";
 
@@ -50,6 +51,7 @@ const typeController = (e) => {
     display.innerHTML += `<span class="red">${
       newLetter === " " ? "▪" : newLetter
     }</span>`;
+    ++errorCount;
   }
 
   // check if given question text is equal to user typed text
@@ -59,6 +61,8 @@ const typeController = (e) => {
 };
 
 const validate = (key) => {
+  console.log(key);
+
   if (key === questionText[userText.length - 1]) {
     return true;
   }
@@ -88,7 +92,6 @@ const gameOver = () => {
     <p>You made <span class="bold red">${errorCount}</span> mistakes</p>
     <button onclick="closeModal()">Close</button>
   `;
-
   addHistory(questionText, timeTaken, errorCount);
 
   // restart everything

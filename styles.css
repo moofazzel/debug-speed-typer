@@ -17,7 +17,8 @@ body {
 }
 
 #question {
-  height: 100px;
+  padding: 10px 20px;
+  min-height: 100px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -164,12 +165,10 @@ body {
   position: initial;
 }
 
-.blog
-
 #histories {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-around;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 30px;
 }
 
 .card {
@@ -217,11 +216,8 @@ body {
   }
 }
 
-@media only screen and (min-width: 1024px) {
-  .card {
-    text-align: left;
-    flex-direction: row;
-    justify-content: space-between;
-    gap: 100px;
+@media only screen and (min-width: 1140px) {
+  #histories {
+    grid-template-columns: 1fr 1fr 1fr;
   }
 }
